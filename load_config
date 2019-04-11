@@ -1,0 +1,19 @@
+#!/usr/bin/python
+import sys
+import os
+
+f=open('aws_config','r')
+contents=f.readlines()
+f.close()
+
+for x in contents:
+    if x.strip().__contains__('='):
+        if x.strip().__contains__('id'):
+            key = x.strip().split('=')
+            os.system('aws configure set aws_access_key_id'+key[1])
+        elif x.strip().__contains__('secret'):
+            key = x.strip().split('=')
+            os.system('aws configure set aws_secret_access_key'+key[1])
+        elif x.strip().__contains__('region'):
+            key = x.strip().split('=')
+            os.system('aws configure set default.region'+key[1])
