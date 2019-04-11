@@ -2,6 +2,7 @@
 import sys
 import os
 
+os.system('mv conf aws_config')
 f=open('aws_config','r')
 contents=f.readlines()
 f.close()
