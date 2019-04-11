@@ -3,6 +3,7 @@
 ### MacOS
 
 ```bash
+$ brew install awscli
 
 [modify conf --> Developer should generate key in IAM service.]
 
